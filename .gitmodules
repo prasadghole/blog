@@ -1,0 +1,3 @@
+[submodule "themes/hugo-code-editor"]
+	path = themes/hugo-code-editor
+	url = https://github.com/aubm/hugo-code-editor-theme.git
