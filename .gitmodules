@@ -2,3 +2,7 @@
 	path = themes/code-editor
 	url = https://github.com/aubm/hugo-code-editor-theme.git
 	branch = master
+[submodule "public"]
+	path = public
+	url = https://github.com/prasadghole/prasadghole.github.io.git
+	branch = master
