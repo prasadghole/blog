@@ -1,6 +1,4 @@
 baseurl = "/"
-realtiveURLs = true 
-uglyURLs = true
 title = "Musing on daily development activities"
 copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
 canonifyurls = true
