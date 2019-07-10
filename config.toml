@@ -1,4 +1,4 @@
-baseurl = "prasadghole.github.io" 
+baseurl = "/"
 realtiveURLs = true 
 uglyURLs = true
 title = "Musing on daily development activities"
