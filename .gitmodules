@@ -6,3 +6,5 @@
 	path = public
 	url = https://github.com/prasadghole/prasadghole.github.io.git
 	branch = master
+[submodules "public"]
+	branch = master

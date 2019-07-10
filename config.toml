@@ -1,6 +1,7 @@
-baseurl = "http://hugo.spf13.com/"
-title = "Hugo Themes"
-author = "Steve Francia"
+baseurl = "prasadghole.github.io" 
+realtiveURLs = true 
+uglyURLs = true
+title = "Musing on daily development activities"
 copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
 canonifyurls = true
 paginate = 3
