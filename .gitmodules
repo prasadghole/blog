@@ -8,3 +8,7 @@
 	branch = master
 [submodules "public"]
 	branch = master
+[submodule "themes/hugo-paper"]
+	path = themes/hugo-paper
+	url = https://github.com/nanxiaobei/hugo-paper
+	branch = master
