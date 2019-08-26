@@ -7,7 +7,7 @@ menu:
     parent: tutorials
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: Vim Tips
+title: Git in a box
 weight: 10
 ---
 # Git in a box 
