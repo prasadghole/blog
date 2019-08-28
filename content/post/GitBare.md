@@ -5,14 +5,14 @@ linktitle: Git in a box
 menu:
   main:
     parent: tutorials
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
+next: /tutorials/Sigleton.md
+prev: /tutorials/VimTips.md
 title: Git in a box
 weight: 10
 ---
 # Git in a box 
 Github is certailnly a good source of keeping master copy of your decentralized git repo. But in some 
-secret project thing it would be much better to have git repository as portable copy.This is where 
+scenario project thing it would be much better to have git repository as portable copy.This is where 
 git bare repository helps.
 
 ## bare repository
@@ -23,7 +23,16 @@ git init --bare
 ```
 
 ## Using bare repository
+We can push existing repo to this file based repository similar to remote repository.
 
+```
+git push <path of bare repo> master
+```
+
+We can clone this bare repository similar to our github repo
+```
+git clone <path of bar repository> <clone directory>
+```
 
 
 
