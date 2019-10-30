@@ -20,7 +20,4 @@ When pointer is made invalid without releasing actual memory pointed by
 memory pointer on heap. This cause memory not getting reused even though
 its available.
 
-## Dangling pointer
-
-## 
 
