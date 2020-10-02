@@ -3,7 +3,7 @@ title = "Musing on daily development activities"
 copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
 canonifyurls = true
 paginate = 3
-theme = "hugo-paper"
+theme = "charaka-hugo-theme"
 
 [params]
     author = "John Doe"
