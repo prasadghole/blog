@@ -1,6 +1,6 @@
 baseurl = "https://prasadghole.github.io"
 title = "Musing on daily development activities"
-copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
+copyright = "Copyright (c) 2008 - 2018, Prasad Ghole"
 canonifyurls = true
 paginate = 3
 theme = "charaka-hugo-theme"
