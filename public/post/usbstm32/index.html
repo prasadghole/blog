@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title> | Musing on daily development activities</title>
+
+<link rel="stylesheet" href="https://prasadghole.github.io/css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://prasadghole.github.io"><h1 class="title is-3">Musing on daily development activities</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">January 1, 0001</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop"></h1>
+  <div class="content">
+    <h1 id="otg">OTG</h1>
+<p>USB OTG is a dual core device which can act as both device and host.
+HS (High speed)
+FS (Full speed)</p>
+<ol>
+<li>1.25 Kbytes of dedicated RAM for advance FIFO control</li>
+<li>Maximum USB bandwidth of one frame (1 ms ) without system intervention.</li>
+</ol>
+<h2 id="clock">Clock</h2>
+<p>It receives the 48 MHz clock from RCC.</p>
+<h2 id="writing-in-peripheral-mode">Writing in peripheral mode</h2>
+<p>CPU write 32 bit word to OTG push register. This data then directly transferred to 
+Tx data configured within USB data RAM.</p>
+<h2 id="reading-in-peripheral-mode">Reading in peripheral mode</h2>
+<p>CPU receives the data from USB by reading 32 bit pop register. This data is
+retrieved from a shared Rx FIFO.</p>
+<h2 id="interrupt-reception">Interrupt reception</h2>
+<p>Application will keep on receiving the Rx FIFO non-empty interrupt as long 
+as there is one packet available to download.</p>
+<h2 id="performance">Performance</h2>
+<ol>
+<li>RAM Size</li>
+<li>FIFO size</li>
+<li>Quick access to AHB push/pop registers.</li>
+</ol>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>Copyright (c) 2008 - 2018, Prasad Ghole</p>
+  </div>
+</section>
+
+
