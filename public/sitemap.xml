@@ -3,59 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://prasadghole.github.io/post/vimplug/</loc>
+    <loc>http://example.org/post/vimplug/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/post/vimbindings/</loc>
+    <loc>http://example.org/post/vimbindings/</loc>
     <lastmod>2019-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/post/pointers_mistakes/</loc>
+    <loc>http://example.org/post/pointers_mistakes/</loc>
     <lastmod>2019-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/post/gitbare/</loc>
+    <loc>http://example.org/post/gitbare/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/post/vimtips/</loc>
+    <loc>http://example.org/post/vimtips/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/post/security/</loc>
+    <loc>http://example.org/post/security/</loc>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/</loc>
+    <loc>http://example.org/post/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/post/</loc>
+    <loc>http://example.org/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/about/</loc>
+    <loc>http://example.org/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/post/usbstm32/</loc>
+    <loc>http://example.org/post/qnxraspberry/</loc>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/categories/</loc>
+    <loc>http://example.org/post/usbstm32/</loc>
   </url>
   
   <url>
-    <loc>https://prasadghole.github.io/tags/</loc>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/series/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
   </url>
   
 </urlset>
