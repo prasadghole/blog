@@ -1,10 +1,10 @@
-baseURL = "http://example.org/"
+baseURL = "https://prasadghole.github.io"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "Hugo Authors"
-title = "Vitae"
+author = "Prasad Ghole"
+title = "Prasad Ghole"
 theme = "hugo-vitae"
-paginate = 5
+paginate = 10
 enableRobotsTXT = true
 
 copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
@@ -28,13 +28,13 @@ googleAnalytics = ""
 	keywords = ["hugo","vitae","theme","static"]
 
 	# Add meta description in head part
-	description = "Vitae is a blog theme for Hugo that focuses on your content."
+	description = "My daily musing"
 
 	# Add pagetitle to homepage <title> tag
 	pagetitle = "All about static site generation"
 
 	# Add a subtitle to your website
-	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
+	subtitle = "My daily musing"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
