@@ -11,7 +11,3 @@
 [submodule "themes/hugo-vitae"]
 	path = themes/hugo-vitae
 	url = https://github.com/datacobra/hugo-vitae.git
-[submodule "public"]
-	path = public
-	url = https://github.com/prasadghole/prasadghole.github.io.git
-	branch = master
