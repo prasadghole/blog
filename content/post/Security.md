@@ -1,15 +1,16 @@
----
-author: "Prasad Ghole"
-date: 2020-10-6
-linktitle: Security principals 
-menu:
-  main:
-    parent: tutorials
-next: /tutorials/GitBare.md
-prev: /tutorials/VimBindings.md
-title: Security principals 
-weight: 10
----
++++
+author = "Prasad Ghole"
+date = 2020-04-29
+title = "Security principals"
+
+tags = [
+"security",
+]
+
+categories = [
+"development",
+]
++++
 # Five Principals for of embedded security
 ## Message
 Off course this is what you want to protect from intruder.

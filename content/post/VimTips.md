@@ -1,16 +1,16 @@
----
-author: "Prasad Ghole"
-date: 2019-07-29
-linktitle: Vim Tips
-menu:
-  main:
-    parent: tutorials
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
-title: Vim Tips
-weight: 10
----
++++
+author = "Prasad Ghole"
+date = 2021-01-22
+title = "Vim Tips"
 
+tags = [
+"vim"
+]
+
+categories = [
+"development",
+]
++++
 
 ## Search in visual mode
 Follow the steps:

@@ -31,13 +31,13 @@ googleAnalytics = ""
 	description = "My daily musing"
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "All about static site generation"
+	pagetitle = "My daily musing"
 
 	# Add a subtitle to your website
 	subtitle = "My daily musing"
 
 	# Activate to show authors on pages if available
-	#listAuthor = true
+	listAuthor = true
 
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true

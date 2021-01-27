@@ -1,15 +1,16 @@
----
-author: "Prasad Ghole"
-date: 2019-09-11
-linktitle: Be careful with pointers
-menu:
-  main:
-    parent: tutorials
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
-title: Be careful with pointers
-weight: 10
----
++++
+author = "Prasad Ghole"
+date = 2020-08-25
+title = "Be careful with pointers"
+
+tags = [
+"C",
+]
+
+categories = [
+"development",
+]
++++
 
 Pointers in C/C++ are dual edge swords provide low level control over 
 memory and hardware. This call for very careful usage which may lead 

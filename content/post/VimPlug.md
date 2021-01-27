@@ -1,16 +1,16 @@
++++
+author = "Prasad Ghole"
+date = 2019-07-29
+title = "Vim Plug in"
 
----
-author: "Prasad Ghole"
-date: 2019-11-03
-linktitle: Vim Plugin
-menu:
-  main:
-    parent: tutorials
-next: /tutorials/Sigleton.md
-prev: /tutorials/VimTips.md
-title: Vim Plug in
-weight: 10
----
+tags = [
+"vim",
+]
+
+categories = [
+"development",
+]
++++
 
 Well time has come to install vim plugins for using more advance features
 of vim. There are lots many options available but I choose `vim plug` 
