@@ -109,7 +109,7 @@ weight = 5
 [[params.social]]
 name = "Github"
 icon = "fab fa-github"
-url = "https://github.com/dataCobra/hugo-vitae"
+url = "https://github.com/prasadghole"
 
 #[[params.social]]
 #name = "Email"
@@ -117,7 +117,16 @@ url = "https://github.com/dataCobra/hugo-vitae"
 #cmd = "mailto:example@example.com"
 
 [[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url = "/index.xml"
+#name = "RSS"
+#icon = "fas fa-rss"
+#url = "/index.xml"
 
+[[params.social]]
+name = "LinkedIn"
+icon = "fab fa-linkedin-in fa-1x"
+url = "https://www.linkedin.com/in/prasadghole"
+
+[[params.social]]
+name = "youtube"
+icon = "fab fa-youtube"
+url = "https://www.youtube.com/channel/UC3aGLubTxHq34jdFjq8Wp0Q"
