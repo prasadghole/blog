@@ -1,9 +1,5 @@
 [submodules "public"]
 	branch = master
-[submodule "themes/hugo-paper"]
-	path = themes/hugo-paper
-	url = https://github.com/nanxiaobei/hugo-paper
-	branch = master
 [submodule "themes/hugo-vitae"]
 	path = themes/hugo-vitae
 	url = https://github.com/datacobra/hugo-vitae.git
