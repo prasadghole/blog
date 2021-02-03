@@ -2,7 +2,7 @@
 title: "CAN Summary"
 date: 2021-02-03T11:34:54+05:30
 lastmod: 2021-02-03T11:34:54+05:30
-draft: true
+draft: false
 keywords: []
 description: "CAN protocol summary"
 tags: ["development"]
@@ -70,10 +70,7 @@ Due to NRZ method a proper continours signal of transmitting same bit may cuase
 recever to think its in error stage. Hence bit stuffing method is used.
 
 Sender send complement value if it detects five bits with same value to be transmitted
-Receiver will also discard the stuff bit value.
-
-# Data Frames
-![can frame](/images/post/CANFrame.jpg)
+Receiver will also discard the stuff bit value.t/CANFrame.jpg)
 
 ## Data frame
 ## Remote frame
