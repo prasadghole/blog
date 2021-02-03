@@ -70,7 +70,9 @@ Due to NRZ method a proper continours signal of transmitting same bit may cuase
 recever to think its in error stage. Hence bit stuffing method is used.
 
 Sender send complement value if it detects five bits with same value to be transmitted
-Receiver will also discard the stuff bit value.t/CANFrame.jpg)
+Receiver will also discard the stuff bit value.
+
+![CAN Frame](/images/post/CANFrame.jpg)
 
 ## Data frame
 ## Remote frame
