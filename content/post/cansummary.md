@@ -59,11 +59,27 @@ On physical layer it uses diffrenrtial electical signal.
 - Asynchronus transmission
 
 # Singal logic levels
+It uses Non return to zero NRX coding.
 - Recessive 
 Logic 1
 - Dominant 
 Logic 0
 
+## Bit stuffing
+Due to NRZ method a proper continours signal of transmitting same bit may cuase
+recever to think its in error stage. Hence bit stuffing method is used.
+
+Sender send complement value if it detects five bits with same value to be transmitted
+Receiver will also discard the stuff bit value.
+
+# Data Frames
+![can frame](/images/post/CANFrame.jpg)
+
+## Data frame
+## Remote frame
+## Overload frame
+## Error frame
+  
 # Communication Protocol
 Access to bus is by using carrier sense multiple access with collision detection
 called bitwise arbitration. Bus normally remain in recessive state. To transmit
