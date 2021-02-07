@@ -47,7 +47,7 @@ Life often leaves us standing bare, naked and dejected with a lost opportunity.
 The tide in the affairs of men does not remain at the flood; it ebbs. We may 
 cry out desperately for time to pause in her passage, but time is deaf to every
 plea and rush on. Over the bleached bones and jumbuled residue of numerous 
-civilizations are written the pathetic word  **Too Late*
+civilizations are written the pathetic word  **Too Late**
 
 ***Martin Luther King Jr.***
 
