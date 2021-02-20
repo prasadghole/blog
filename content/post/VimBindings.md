@@ -1,7 +1,7 @@
 ---
 title : "I love vim (bindings)"
 date: 2019-02-11T00:18:21+05:30
-lastmod: 2021-02-11T00:18:21+05:30
+lastmod: 2021-02-20:18:21+05:30
 draft: false
 keywords: []
 description: " Various vim bindings as use in many tools "
@@ -56,7 +56,18 @@ set -o vi
 # Vim for Visual Studio code
 
 # FakeVim for QT Creator
-# Evil for emacs
-# Online code editors
+# Vim for browser
+Why use vim for text editing only with firefox and chrome extension I use vim for
+browsing using only keyboard. 
 
+![FireFox Vimium-FF](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)
+
+![Vimium](/images/post/Vimium-ff.png)
+
+# Online code editors
+### Compiler explorer by godbolt.org
+![godboltvim](/images/post/godboltvim.PNG)
+
+### Onlinegdb
+![onlinegdb](/images/post/onlinegdb.gif)
 
