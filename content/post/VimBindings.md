@@ -46,28 +46,28 @@ Even though you know vim is my first choice as editor in some situation we can't
 vim bindings I am using.
 
 # VIM for bash 
-{{<highlight C "hl_lines=1 " >}}
+{{<highlight bash  >}}
 
 set -o vi
 
 {{</ highlight >}}
-# Vrapper for Eclipse
-
-# Vim for Visual Studio code
-
-# FakeVim for QT Creator
 # Vim for browser
 Why use vim for text editing only with firefox and chrome extension I use vim for
 browsing using only keyboard. 
 
 ![FireFox Vimium-FF](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)
 
-![Vimium](/images/post/Vimium-ff.png)
+{{<figure src="/images/post/vimium-ff.gif" title="vimium Plugin" >}}
 
-# Online code editors
-### Compiler explorer by godbolt.org
-![godboltvim](/images/post/godboltvim.PNG)
+# Compiler explorer by godbolt.org
+{{<figure src="/images/post/godboltvim.gif" title="Setting compiler explorer">}}
 
-### Onlinegdb
-![onlinegdb](/images/post/onlinegdb.gif)
+# Onlinegdb
+{{<figure src="/images/post/onlinegdb.gif" title="Setting online gdb">}}
 
+
+# Vrapper for Eclipse
+
+# Vim for Visual Studio code
+
+# FakeVim for QT Creator
