@@ -101,3 +101,15 @@ Used as fieldbus for factory automation. Maximum 64 nodes can be used till maxim
 
 ## J1939
 This is used in heavy trucks and buses. It uses 29 bit identifier.
+
+# Error Handling
+A bus error of message can occure because of either transmittor or receciver. 
+CAN uses unique method of error detection using positive and negative acknowlegment 
+method. All stations on bus receives all the messages and every node will try to
+acknowldge message in perticular time slot (ACK). 
+If message is received and positively acknowldged by at least one station. It 
+indicates that message is transmitted correctly.
+If negative acknowlegment is received and not a single positive acknowlegment is received 
+means it is the fault of messages transmittor.
+
+# Error Management
