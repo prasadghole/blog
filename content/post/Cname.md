@@ -42,17 +42,17 @@ sequenceDiagrams:
 
 <!--more-->
 # C Objects Naming
-Although we know the common resrtictions on naming identifiers like it should not start with number. There ar some substle
+Although we know the common restrictions on naming identifiers like it should not start with number. There are some subtle
 conventions we need to know. In this post I will note down those along with reasons behind these.
 
 # Underscore
-C compliler will not complain if we name identifiers starting with underscore, but it can create issues with portability
+C compiler will not complain if we name identifiers starting with underscore, but it can create issues with portability
 as C standard reserve the use of it by for naming new additional C keywords. Like 
 ```
 _Bool
 ```
 
-This is a new datatype introduced by C99 standard. Indetifier starting with underscore followed by Capitol letter or another
+This is a new datatype introduced by C99 standard. Identifier starting with underscore followed by Capitol letter or another
 underscore can or will be reserved keyword in future.
 
 # _t (Underscore t)
