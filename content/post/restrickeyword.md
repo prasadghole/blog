@@ -2,7 +2,7 @@
 title: "Not a Volatile - Restrict"
 date: 2021-03-22T00:11:46+05:30
 lastmod: 2021-03-22T00:11:46+05:30
-draft: true
+draft: false
 keywords: []
 description: " Restrict keyword in C"
 tags: ["Programming"]
