@@ -1,12 +1,12 @@
 ---
-title: "Virtual Box networking"
+title: "Virtual Box Networking"
 date: 2021-03-27T23:59:06+05:30
 lastmod: 2021-03-27T23:59:06+05:30
 draft: true
 keywords: []
-description: ""
-tags: []
-categories: []
+description: "Host to guest networking access with VirtualBox"
+tags: ["Networking"]
+categories: ["Development"]
 author: "Prasad Ghole"
 
 # You can also close(false) or open(true) something for this content.
