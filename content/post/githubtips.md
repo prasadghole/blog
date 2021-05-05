@@ -2,7 +2,7 @@
 title: "Githubtips"
 date: 2021-04-06T02:37:08+05:30
 lastmod: 2021-04-06T02:37:08+05:30
-draft: true
+draft: false
 keywords: []
 description: ""
 tags: ["git"]
