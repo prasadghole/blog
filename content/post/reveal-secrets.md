@@ -1,13 +1,13 @@
 ---
 title: "Reveal Secrets"
 date: 2021-02-02T00:48:49+05:30
-lastmod: 2021-02-02T00:48:49+05:30
+lastmod: 2022-06-15T00:48:49+05:30
 draft: false
 keywords: []
 description: "Reveal.js links"
 tags: ["emacs"]
 categories: ["Publishing"]
-author: ""
+author: "Prasad Ghole"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
@@ -56,3 +56,11 @@ https://orgmode.org/
 
 # Publishing to Internet
 http://jr0cket.co.uk/2014/01/share-your-revealjs-slides-on-github-pages.html
+
+# Using Pandoc
+```
+pandoc --standalone -f org -t revealjs  TraingSlides.org -o out.html
+```
+
+As I may not use emacs/spacemacs on every machine Pandoc is right option to create revealjs output from org or markdown
+document.

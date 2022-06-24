@@ -30,3 +30,9 @@ semicolon at the end of lines. I followed below steps
 
 ![gif](/images/post/vim1.gif)
 
+## Spell check 
+### Add word to spell check dictionary
+Vim stores good words in 'spellfile'. 
+Place cursor on wrong word and press 
+
+**zg**
