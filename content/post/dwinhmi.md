@@ -70,3 +70,25 @@ FORMAT d:/fs:fat32/a:4096
 
 This took almost 10 minutes or more to format 16 GB of card.
 
+After copying it to SD card, and restarting still no blue boot screen. 
+But previous UI also do not start.
+
+Till I figure out this I will continue explore using USB download.
+
+# DWIN display memory layout
+
+## Flash
+16 MB of flash is divided into 64 sectors of each 256 KB. 
+Each sector index 0 to 63 will have file names accordingly.
+
+![Flash Space](/images/post/dwin_flashspace.PNG)
+
+## RAM
+128 KB flash is aligned as 2 bytes continous memory.
+Address 0x0000 to 0x0FFF is reserved for system variable.
+
+![Flash Space](/images/post/dwin_ramspace.PNG)
+
+# UI development
+
+
