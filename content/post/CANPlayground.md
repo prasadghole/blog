@@ -2,7 +2,7 @@
 title: "CAN Playground"
 date: 2022-07-05T20:29:14+05:30
 lastmod: 2022-07-05T20:29:14+05:30
-draft: true
+draft: false
 keywords: []
 description: "Can bus on PC"
 tags: ["CAN"]
@@ -12,7 +12,7 @@ author: "Prasad Ghole"
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: false
-toc: false
+toc: true
 autoCollapseToc: false
 postMetaInFooter: false
 hiddenFromHomePage: false
