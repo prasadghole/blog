@@ -61,5 +61,16 @@ I ssh into it.
 Apache was pre installed on this machine. Hence when I types ip address I was able to default 
 http page. Next task is convert this to https only secured website.
 
+## Creating new non root user
+### Creating git user
+To use VPS as git server I have created git user with 
+[setting up git server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
 
+## Hosting web site
+My current vps support apache webserver as default. File served from 
+/var/www/html.index is my home page.
+
+## Domain name in direction
+
+## Setting up https secured access
