@@ -53,6 +53,7 @@ ubuntu os. (Centos was default)
 I added my personal public ssh key to account. 
 
 ## SSH connection
+[Reference](https://www.hostinger.in/tutorials/getting-started-with-vps-hosting)
 Once started on vps manage page you will see ip address of my vps machine.
 
 I ssh into it.
@@ -62,6 +63,33 @@ Apache was pre installed on this machine. Hence when I types ip address I was ab
 http page. Next task is convert this to https only secured website.
 
 ## Creating new non root user
+```
+adduser usename
+usermod -aG sudo usrname
+```
+
+SSH access for new user
+```
+su - username
+mkdir .ssh
+chmod 700 .ssh
+
+```
+
+Create public private key pair or use existing public key. I used my existing
+public key as
+
+```
+scp ~/.ssh/id_rsa.pub username@hostname:/home/username/.ssh
+```
+
+On VPS server
+
+```
+~/home/username/.ssh/id_rsa.pub >> authorized_keys
+```
+
+
 ### Creating git user
 To use VPS as git server I have created git user with 
 [setting up git server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
@@ -74,3 +102,17 @@ My current vps support apache webserver as default. File served from
 ## Domain name in direction
 
 ## Setting up https secured access
+
+Login to remote server with non root user
+```
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:certbot/certbot
+
+sudo apt update
+sudo apt install certbot python3-certbot-apache
+
+```
+
+# References
+1. https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04#step-5-setting-up-virtual-hosts-recommended
+2. https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-22-04
