@@ -2,7 +2,7 @@
 title: "Dwinhmi"
 date: 2022-07-03T14:06:55+05:30
 lastmod: 2022-07-03T14:06:55+05:30
-draft: true
+draft: false
 keywords: []
 description: "Using DWIN HMI Software"
 tags: []
@@ -12,7 +12,7 @@ author: "Prasad Ghole"
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: false
-toc: false
+toc: true
 autoCollapseToc: false
 postMetaInFooter: false
 hiddenFromHomePage: false
@@ -60,6 +60,23 @@ programmed UI.
 
 Next task is to download through SD card.
 
+# Hello world
+After downloading above project. I tried my own hands on hello world program after following 
+many youtube videos and tutorials but not able to run on target HMI. Program was simulating
+properly on DGUS software, but when downloaded on HMI shows static screens which were not
+part of hello world program.
+
+To fix this I downloaded [factory demo](https://www.dwin-global.com/factory-demo/) for my model
+DMG48270F043_01WTR board.
+
+I observed DWIN_SET files in factory demo do not include *32.icl* as mentioned in other projects 
+but infact contain 24.icl. Hence after chaning output file name to 24.icl and making changes
+in configuation. I was able to download and run my Hello world program successfully.
+
+[Hello World](https://github.com/prasadghole/dwin/tree/main/DGM48270F043_01WTR/HelloWorld) is 
+availble in github for referance.
+
+
 # Formatting SD card
 SD card size limitations as per documentation in 1 to 16 GB. For my system
 card was on D drive hence I issued folloing command
@@ -84,11 +101,29 @@ Each sector index 0 to 63 will have file names accordingly.
 ![Flash Space](/images/post/dwin_flashspace.PNG)
 
 ## RAM
-128 KB flash is aligned as 2 bytes continous memory.
+128 KB flash is aligned as 2 bytes continuous memory.
 Address 0x0000 to 0x0FFF is reserved for system variable.
 
 ![Flash Space](/images/post/dwin_ramspace.PNG)
 
 # UI development
 
+## Interface objects
+If we assume model view controller (MVC) architecture we can consider
+interface objects as model.
 
+### Variable Pointers (VP)
+DGUS uses simple memory map address similar to MODBUS protocol to issue
+read/write commands and read/write data. GUI objects called as interface
+objects values are stored in memory addresses called as Variable Pointers
+(VP). VP values are modified only by user interaction.
+
+### Description Pointers (SP)
+A description pointer is a VP whose value can be modified by user using
+communication interface.
+
+Its UI developers responsibility to make sure VP length should be such that 
+there addresses are not overlapped.
+
+## Controls
+These are view of MVC architecture. Control have minimum 5 properties/parameters
