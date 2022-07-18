@@ -95,6 +95,20 @@ To use VPS as git server I have created git user with
 [setting up git server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
 
+# Setting up Jenkins
+On my perticular machine standard instructions for installing jenkins were not working
+I followed [Install on linux](https://www.jenkins.io/doc/book/installing/linux/):w
+
+## Install java
+```
+sudo apt install default-jre
+```
+Run jenkins
+```
+sudo systemctl start jenkins
+
+```
+
 ## Hosting web site
 My current vps support apache webserver as default. File served from 
 /var/www/html.index is my home page.
