@@ -109,7 +109,17 @@ sudo systemctl start jenkins
 
 ```
 
-## Hosting web site
+## Starting Jenkins
+Once started on http port 8080 it will ask for initial password. To get the password
+## Starting Jenkins
+Once started on http port 8080 it will ask for initial password. To get the password
+
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+Proceed with default plugin installation.
+
+# Hosting web site
 My current vps support apache webserver as default. File served from 
 /var/www/html.index is my home page.
 
