@@ -1,8 +1,8 @@
 ---
-title: "Vpssetup"
+title: "VPS setup"
 date: 2022-07-12T01:08:58+05:30
 lastmod: 2022-07-12T01:08:58+05:30
-draft: true
+draft: false
 keywords: []
 description: ""
 tags: []
@@ -46,13 +46,13 @@ sequenceDiagrams:
 This page document various steps and tasks performed to manage my own vps server. I choose
 VPS service from hostinger.
 
-## Initial setp
+## Initial Setup
 After registering and payment, I logged in and started server instance. I choose non default
 ubuntu os. (Centos was default)
 
 I added my personal public ssh key to account. 
 
-## SSH connection
+## SSH Connection
 [Reference](https://www.hostinger.in/tutorials/getting-started-with-vps-hosting)
 Once started on vps manage page you will see ip address of my vps machine.
 
@@ -96,7 +96,7 @@ To use VPS as git server I have created git user with
 
 
 # Setting up Jenkins
-On my perticular machine standard instructions for installing jenkins were not working
+On my particular machine standard instructions for installing jenkins were not working
 I followed [Install on linux](https://www.jenkins.io/doc/book/installing/linux/):w
 
 ## Install java
@@ -138,5 +138,5 @@ sudo apt install certbot python3-certbot-apache
 ```
 
 # References
-1. https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04#step-5-setting-up-virtual-hosts-recommended
-2. https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-22-04
+1. [DigitalOcean Setup](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04#step-5-setting-up-virtual-hosts-recommended)
+2. [DigitalOcean https](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-22-04)

@@ -47,6 +47,12 @@ Quick prototyping and availability of rich library set makes easy to model
 embedded software in python. Current scope of this blog post is to modelling
 embedded software and not embedded system.
 
+# Architectural pattern
+[pypubsub](https://pypubsub.readthedocs.io) is suitable for simulating decoupled
+system using observer pattern. Hierarchical topic pattern gives more structured
+view to design and build decoupled system.
+
+
 # Basic building blocks
 ## Timers
 This is most fundamental unit of embedded system. 

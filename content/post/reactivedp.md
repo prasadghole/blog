@@ -47,3 +47,8 @@ sequenceDiagrams:
 - It must react to failure and stay available (resilient).
 - It must react to variable load conditions (elastic).
 - It must react to inputs (message driven).
+
+# Example frameworks
+## Python rx
+
+
