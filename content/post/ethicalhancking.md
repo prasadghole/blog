@@ -69,3 +69,25 @@ During OS installation select Auto (UFS) BIOS option.
 ### Installation Success
 
 ![Setup](/images/post/VirtualBox_PFSense_Boot.png)
+
+## Install metasploitable
+
+Download [from](https://sourceforge.net/projects/metasploitable/files/latest/download)
+This is pre built virtual box image hence only machine need to be created and no new
+VDI need to be created.
+
+
+### network configuration 
+- Adapter 1 Internal network Name = Internal LAN
+
+### Credentials 
+- Username msfadmin
+- password msfadmin
+
+![Boot](/images/post/VirtualBox_Metasploitable.png)
+
+## KALI Linux
+This is our main source of penetration test client.
+
+![Kali boot](/images/post/VirtualBox_KALI.png)
+
