@@ -91,3 +91,7 @@ This is our main source of penetration test client.
 
 ![Kali boot](/images/post/VirtualBox_KALI.png)
 
+## Ubuntu Desktop
+Business as usual in virtualbox.
+
+

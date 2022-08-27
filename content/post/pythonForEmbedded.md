@@ -12,7 +12,7 @@ author: "Prasad Ghole"
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: false
-toc: false
+toc: True
 autoCollapseToc: false
 postMetaInFooter: false
 hiddenFromHomePage: false
