@@ -1,7 +1,7 @@
 ---
-title: "Mysetup"
-date: 2021-02-05T20:52:18+05:30
-lastmod: 2021-02-05T20:52:18+05:30
+title: "Bookmark"
+date: 2022-09-23T16:01:08+05:30
+lastmod: 2022-09-23T16:01:08+05:30
 draft: true
 keywords: []
 description: ""
@@ -41,25 +41,16 @@ sequenceDiagrams:
 ---
 
 <!--more-->
+This is my list of books on technology , phylosophy
 
-# My Linux Setup
-## Ubuntu  LTS
-## Editors
-- vim
-- vim-gnome for VIM  GUI 
-- emacs (spacemacs)
+# Technology
+## Embedded
+1. Design Patterns for Embedded Systems in C
+Bruce Powel Douglass
+2. Multicore Software Development Techniques.
+Robert Oshana
+3. The Pragmatic Programmer
+David Thomas, Andrew Hunt
 
-# Utilities
-##  Fuzzy finder
-
-# Windows Setup
-Why not use same set of tools supported similar keybindings.
-
-## WSL
-Windows subsystem for linux provide similar command line fill as of linux
-system.
-
-## MSYS2
-With MSYS2 I get similar feel of linux based system.
 
 

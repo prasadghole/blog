@@ -1,7 +1,7 @@
 ---
-title: "Mysetup"
-date: 2021-02-05T20:52:18+05:30
-lastmod: 2021-02-05T20:52:18+05:30
+title: "PragmaticProg"
+date: 2022-09-23T16:09:51+05:30
+lastmod: 2022-09-23T16:09:51+05:30
 draft: true
 keywords: []
 description: ""
@@ -41,25 +41,3 @@ sequenceDiagrams:
 ---
 
 <!--more-->
-
-# My Linux Setup
-## Ubuntu  LTS
-## Editors
-- vim
-- vim-gnome for VIM  GUI 
-- emacs (spacemacs)
-
-# Utilities
-##  Fuzzy finder
-
-# Windows Setup
-Why not use same set of tools supported similar keybindings.
-
-## WSL
-Windows subsystem for linux provide similar command line fill as of linux
-system.
-
-## MSYS2
-With MSYS2 I get similar feel of linux based system.
-
-
