@@ -73,3 +73,28 @@ Compress large data into small output range
 ## Lossiness
 We loose information from input to output.
 
+# Threat modeling
+## What we are building 
+## What can go wrong
+## How we mitigate it
+## How well we done our job.
+
+STRIDE for finding threats
+
+
+# GPG 
+## GPG key usage
+1. I want anyone receiving my email to know that I cannot repudiate it. 
+Sign my message with private key.
+2. I want to verify message I received is sent by person who say he is. 
+Verify the signature by senders public key.
+3. I want to send message which only intended recipient can read.
+Encrypt message with recipient public key.
+4. I want to read message i received.
+Decrypt message with your private key.
+
+
+# FOTA
+Firmeware over the air. For IOT devices we need to update the firmware on the field.
+
+
