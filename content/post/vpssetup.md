@@ -86,7 +86,7 @@ scp ~/.ssh/id_rsa.pub username@hostname:/home/username/.ssh
 On VPS server
 
 ```
-~/home/username/.ssh/id_rsa.pub >> authorized_keys
+echo ~/home/username/.ssh/id_rsa.pub >> authorized_keys
 ```
 
 
