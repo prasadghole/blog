@@ -66,6 +66,8 @@ vim.
 | Time Tracking | No     | Yes   |
 | Web browsing  | No     | Yes   |
 
+My current 2022 choice is use EMACS for documentation and literate programming using bable.
+And for software development use nvim.
 
 
 

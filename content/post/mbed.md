@@ -1,5 +1,5 @@
 ---
-title: "Mbed"
+title: "Mbed on NRF52-DK board"
 date: 2022-11-05T17:58:32+05:30
 lastmod: 2022-11-05T17:58:32+05:30
 draft: true
@@ -7,12 +7,12 @@ keywords: []
 description: ""
 tags: []
 categories: []
-author: ""
+author: "Prasad Ghole"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: false
-toc: false
+toc: true
 autoCollapseToc: false
 postMetaInFooter: false
 hiddenFromHomePage: false
@@ -62,6 +62,14 @@ Trying to download example code from[NRF site](https://os.mbed.com/platforms/Nor
 
 I was able successfully compile the code but when debug started observed message "timeout on debug
 server "
+
+### Debug with Segger Ozone
+On mbed site debugging with Segger connected information is not available (for me yet).
+
+I tried to use Segger Ozone and was successfully. For NRF52-DK board using SWD connection I was able 
+to debug the .elf file generated.
+![ozonedebug](/images/post/Ozone_NRF52DK_Debug.png)
+
 
 ## Deploy
 ### Manually copy
