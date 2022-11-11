@@ -1,0 +1,104 @@
+#+options: ':nil -:nil ^:{} num:nil toc:nil
+#+author:
+#+creator: Emacs 28.2 (Org mode 9.5.5 + ox-hugo)
+#+hugo_with_locale:
+#+hugo_front_matter_format: toml
+#+hugo_level_offset: 1
+#+hugo_preserve_filling:
+#+hugo_delete_trailing_ws:
+#+hugo_section: posts
+#+hugo_bundle:
+#+hugo_base_dir: /msys64/home/pghole/blog/
+#+hugo_goldmark:
+#+hugo_code_fence:
+#+hugo_use_code_for_kbd:
+#+hugo_prefer_hyphen_in_tags:
+#+hugo_allow_spaces_in_tags:
+#+hugo_auto_set_lastmod:
+#+hugo_custom_front_matter:
+#+hugo_blackfriday:
+#+hugo_front_matter_key_replace:
+#+hugo_date_format: %Y-%m-%dT%T%z
+#+hugo_paired_shortcodes:
+#+hugo_pandoc_citations:
+#+bibliography:
+#+html_container:
+#+html_container_class:
+#+hugo_aliases:
+#+hugo_audio:
+#+date: <2022-11-09 Wed>
+#+description:
+#+hugo_draft: true
+#+hugo_expirydate:
+#+hugo_headless:
+#+hugo_images:
+#+hugo_iscjklanguage:
+#+keywords:
+#+hugo_layout:
+#+hugo_lastmod:
+#+hugo_linktitle:
+#+hugo_locale:
+#+hugo_markup:
+#+hugo_menu:
+#+hugo_menu_override:
+#+hugo_outputs:
+#+hugo_publishdate:
+#+hugo_series:
+#+hugo_slug:
+#+hugo_tags:
+#+hugo_categories:
+#+hugo_resources:
+#+hugo_type:
+#+hugo_url:
+#+hugo_videos:
+#+hugo_weight:
+
+#+TITLE: MBed from ARM
+
+* mbed Ecosystem
+ARM mbed provide cloud and desktop platform for developing firmware using multiple toolchain.
+It compiles application and mbed OS code into single binary file to be loaded or debugged.i
+
+It uses *arm rtx * RTOS as base OS along with other components.
+
+* Online Keil compliler support
+My board NRF52-DK is not supported. Hence only option limited is mbed IDE.
+
+
+* My hands on experience
+** Build
+Connected board nRF52DK with BLE support. I was able to build the project but not able
+to download or debug. I think debug server connection is not established.
+
+** Debug
+Trying to download example code from[NRF site](https://os.mbed.com/platforms/Nordic-nRF52-DK/) 
+
+I was able successfully compile the code but when debug started observed message "timeout on debug
+server "
+
+** Deploy
+*** Manually copy
+
+** mbed-cli
+Downloaded installer.exe but when installed it still installed source code. Hence we need to build 
+the tool using 
+
+``python setup.py install``
+It need python 27. After installing also I faced some dependency issues. I installed the 
+mbed-cli by using virtual environment requirement.txt file from mbed-os folder from 
+example folder. It require python 2.
+#+BEGIN_SRC shell
+python -m pip install -r requirements.txt
+#+END_SRC
+
+With below commands I was able to build and deploy the program on board.
+#+BEGIN_SRC  shell
+mbed-cli target GCC_ARM
+mbed-cli compile -f 
+#+END_SRC
+
+** Speed
+mbed IDE being jaz=vascript electron node platform is very resource consuming. During clean build
+it almost take 900 MB of RAM .
+
+** Using eclipse or command line tool for mbed development.
