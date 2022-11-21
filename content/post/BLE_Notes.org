@@ -1,0 +1,136 @@
+
+* Bluetooth version
+
+[[./images/post/BLE/Bluetooth_configs.png]]
+
+
+
+* Building blocks of bluetooth device
+** Application
+** Host
+** Controller
+
+* BLE limitations
+** Speed
+theoretical upper limit of 1Mbps. But it is restricted by
+- Traffic
+- protocol overhead
+- Radio limitations
+*** connection interval
+For active connection interval to interval between two consecutive connection event is
+7.5 ms to 4 S. Practically we can assume 5-10 KB per seconds.
+** Operating range
+Practically 2 to 5 meters.
+** Topology
+BLE can transmit in
+** broadcasting
+Broadcasting is needed for advertising device services. A standard advertising packet contains 31-byte payload.
+Broadcasting has no security or privacy.
+** Connections
+This is needed for bidirectional data transfer. A connection is permanent, periodical data
+exchange between two devices. It is secure by design.
+It involves two parts
+*** Central (master)
+*** Peripheral (slave)
+
+With version 4.1
+- any device can act as central or peripheral at the same time.
+- A central can be connected to multiple peripherals.
+- A peripheral can be connected to multiple centrals.
+
+
+
+
+
+* Layered architecture
+** Physical layer
+It uses 2.4 GHz band with 40 channels (2.4 to 2.4835 GHz). Channel 37,38 and 39 are
+used for advertising. Channel selected is changed using
+channel = (current channel + hop ) mod 37
+
+hop value is communicated when session is established.
+
+** Address
+It has 6 bytes
+- public device address
+- random device address
+
+** Logical link layer and adaptation controller (L2CAP)
+This is similar to TCP layer.
+
+* Packets
+BLE has only 2 types of packets
+** Advertising
+31 bytes basic header along with device address. Used for publishing data
+and discover slaves and connect to them.
+Sent at fixed rate 20 ms to 10.24 Seconds.
+
+Types of
+*** Connectable or non-connectable
+*** Scannable or non scannable
+*** Directed or undirected
+
+** Data packets
+* Connection
+To establish connection master first scan for advertisers currently accepting
+connections. These can be filtered based on Bluetooth address or based on
+advertising data itself. When suitable slave is selected master send connection.
+request and based on slaves response establish connection.
+
+* Security
+Security manager provides three procedures
+
+Security issues
+[[https://technotes.kynetics.com/2018/BLE_Pairing_and_bonding/#key-concepts][ref]]
+** Passive eavesdropping
+A third device listens to the data being exchanged between two paired devices. BLE
+overcomes this by 
+
+** Pairing
+A temporary common key is generated to be able to switch to secure encrypted link.
+This link is not stored.
+** Bonding
+After **paring** generation and exchange of permanent security keys.
+** Pairing algorithms
+*** Just work
+STK is generated on both sides,based on packet exchange protocol. No security against
+Man in the middle attack.
+*** Passkey
+*** Out of band
+When using this additional data is transferred by means other than BLE radio like NFC.
+
+
+
+* GAP (Generic access profile)
+It provide framework to allow devices to discover each other,
+broadcast data, establish secure connection,.
+** Roles
+*** Broadcaster
+Sends periodic advertising packets with data. example thermometer broadcast temperature.
+
+*** Observer
+Collect data from brodadcasters. example remote display displaying thermometer temperature
+value.
+
+*** Central
+This is a device capable of establishing multiple connections to peer. Computation
+requirements for central are more hence it is usually played by smart phone.
+
+It listens for advertising packets and initiate communication with selected device.
+
+*** Peripheral
+It uses advertising packets to allow central to find it and subsequently establish connection.
+
+* GATT (Generic Attribute Profile)
+It established in detail how to exchange all profile and user data over BLE.
+** Roles
+*** Client
+*** Server
+
+** UUID
+Universally unique identifier is 128 bit (16 bytes) number that is guaranteed to
+be globally unique.
+
+Due to limitations of 27 bytes on data payload BLE specification adds 16 bit and 32 bits
+UUID
+ 
