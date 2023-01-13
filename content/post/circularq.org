@@ -1,0 +1,170 @@
+#+options: ':nil -:nil ^:{} num:nil toc:nil
+#+Title:Generic Circular queue
+#+author:
+#+creator: Emacs 28.2 (Org mode 9.5.5 + ox-hugo)
+#+hugo_with_locale:
+#+hugo_front_matter_format: toml
+#+hugo_level_offset: 1
+#+hugo_preserve_filling:
+#+hugo_delete_trailing_ws:
+#+hugo_section: posts
+#+hugo_bundle:
+#+hugo_base_dir:
+#+hugo_goldmark:
+#+hugo_code_fence:
+#+hugo_use_code_for_kbd:
+#+hugo_prefer_hyphen_in_tags:
+#+hugo_allow_spaces_in_tags:
+#+hugo_auto_set_lastmod:
+#+hugo_custom_front_matter:
+#+hugo_blackfriday:
+#+hugo_front_matter_key_replace:
+#+hugo_date_format: %Y-%m-%dT%T%z
+#+hugo_paired_shortcodes:
+#+hugo_pandoc_citations:
+#+bibliography:
+#+html_container:
+#+html_container_class:
+#+hugo_aliases:
+#+hugo_audio:
+#+date: <2023-01-13 Fri>
+#+description:
+#+hugo_draft:
+#+hugo_expirydate:
+#+hugo_headless:
+#+hugo_images:
+#+hugo_iscjklanguage:
+#+keywords:
+#+hugo_layout:
+#+hugo_lastmod:
+#+hugo_linktitle:
+#+hugo_locale:
+#+hugo_markup:
+#+hugo_menu:
+#+hugo_menu_override:
+#+hugo_outputs:
+#+hugo_publishdate:
+#+hugo_series:
+#+hugo_slug:
+#+hugo_tags:
+#+hugo_categories:
+#+hugo_resources:
+#+hugo_type:
+#+hugo_url:
+#+hugo_videos:
+#+hugo_weight:
+
+* Circular queue
+Circular queue or ring buffer is a data structure used commonly in embedded system.
+This post summaries my implementation understanding based on various internet sources.
+
+* Head vs Tail
+One of the measure confusion was how to refer head and tail. If we consider real life
+queue in railway new people join (queue) from tail and processed (dequeue) from head.
+But some websites, in fact [[https://www.kernel.org/doc/Documentation/circular-buffers.txt][Linux Kernel]] head index incremented when item added,which
+in real life added at end. It would be better to refer them as front and back.
+
+* Generic Queue
+Most of the implementation available for circular queue in embedded system based
+on static array. As programmed by our beloved friend chatGPT.
+
+#+begin_src c
+
+  #define QUEUE_S
+  #define QUEUE_SIZE 10
+
+  struct queue
+  {
+    int front;
+    int rear;
+    int data[QUEUE_SIZE];
+  };
+
+  void initQueue(struct queue *q)
+  {
+    q->front = 0;
+    q->rear = -1;
+  }
+
+  int isQueueFull(struct queue *q)
+  {
+    if ((q->rear + 1) % QUEUE_SIZE == q->front)
+    {
+      return 1;
+    }
+    else
+    {
+      return 0;
+    }
+  }
+
+  int isQueueEmpty(struct queue *q)
+  {
+    if (q->rear == -1)
+    {
+      return 1;
+    }
+    else
+    {
+      return 0;
+    }
+  }
+
+  void enqueue(struct queue *q, int value)
+  {
+    if (isQueueFull(q))
+    {
+      printf("Queue is full, cannot enqueue\n");
+    }
+    else
+    {
+      q->rear = (q->rear + 1) % QUEUE_SIZE;
+      q->data[q->rear] = value;
+     }
+  }
+
+  int dequeue(struct queue *q
+  int value;
+  if (isQueueEmpty(q))
+  {
+    printf("Queue is empty, cannot dequeue\n");
+    return -1;
+  }
+  else
+  {
+    value = q->data[q->front] ;
+    if (q->front == q->rear)
+    {
+      q->front = 0;
+      q->rear = -1;
+    }
+    else
+    {
+      q->front = (q->front + 1) % QUEUE_SIZE;
+    }
+    return value;
+  }
+  }
+
+  #+end_src
+  
+** Queue structure
+As this will be generic library for storing fundamental to user defined data types
+storage will be provided by the client.
+
+#+begin_src c
+struct Queue {
+void * buffer,
+void * front,
+void * rear,
+void * size,
+void * maxsize
+}
+
+#+end_src
+
+
+* References
+[fn:1] https://embeddedartistry.com/blog/2017/05/17/creating-a-circular-buffer-in-c-and-c/
+
+
