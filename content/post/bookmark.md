@@ -2,7 +2,7 @@
 title: "Bookmark"
 date: 2022-09-23T16:01:08+05:30
 lastmod: 2022-09-23T16:01:08+05:30
-draft: true
+draft: false
 keywords: []
 description: ""
 tags: []

@@ -2,7 +2,7 @@
 title: "Text Editor wars"
 date: 2022-11-03T12:34:58+05:30
 lastmod: 2022-11-03T12:34:58+05:30
-draft: true
+draft: false
 keywords: []
 description: "EMACS vs (N)VIM"
 tags: []

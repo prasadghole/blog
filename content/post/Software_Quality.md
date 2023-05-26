@@ -2,7 +2,7 @@
 title: "Software_Quality"
 date: 2022-09-22T19:23:54+05:30
 lastmod: 2022-09-22T19:23:54+05:30
-draft: true
+draft: false
 keywords: []
 description: ""
 tags: []

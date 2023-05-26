@@ -8,7 +8,7 @@
 #+hugo_delete_trailing_ws:
 #+hugo_section: post
 #+hugo_bundle:
-#+hugo_base_dir: /d/Prasad/blog/
+#+hugo_base_dir: ../../
 #+hugo_goldmark:
 #+hugo_code_fence:
 #+hugo_use_code_for_kbd:
@@ -28,7 +28,7 @@
 #+hugo_audio:
 #+date: <2023-05-26 Fri>
 #+description:
-#+hugo_draft: false
+#+hugo_draft: true
 #+hugo_expirydate:
 #+hugo_headless:
 #+hugo_images:

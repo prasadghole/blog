@@ -1,5 +1,5 @@
 #+options: ':nil -:nil ^:{} num:nil toc:nil
-#+author:
+#+author: Prasad Ghole
 #+creator: Emacs 28.2 (Org mode 9.5.5 + ox-hugo)
 #+hugo_with_locale:
 #+hugo_front_matter_format: toml
@@ -8,7 +8,7 @@
 #+hugo_delete_trailing_ws:
 #+hugo_section: post
 #+hugo_bundle:
-#+hugo_base_dir: /msys64/home/pghole/blog/
+#+hugo_base_dir: ../../
 #+hugo_goldmark:
 #+hugo_code_fence:
 #+hugo_use_code_for_kbd:
@@ -53,7 +53,7 @@
 #+hugo_videos:
 #+hugo_weight:
 #+TITLE: Hugo with emacs org mode
-[[/images/post/org-mode-qt-.jpg]]
+[[/images/post/org-mode-qt.jpg]]
 * Why
 
 Exclusively using emacs for writing documentation. I can now write posts directly
@@ -86,3 +86,5 @@ This is hard coded. Find way to make it based on environment Find way to make it
 #+hugo_front_matter_format: toc false
 #+end_src
 
+** Credits
+[[https://www.freepik.com/free-vector/cyber-security-concept_7970729.htm#query=cybersecurity&position=1&from_view=search&track=sph][Freepik]]
