@@ -28,7 +28,7 @@
 #+hugo_audio:
 #+date: <2022-11-07 Mon>
 #+description:
-#+hugo_draft: true
+#+hugo_draft: false
 #+hugo_expirydate:
 #+hugo_headless:
 #+hugo_images:
@@ -53,7 +53,7 @@
 #+hugo_videos:
 #+hugo_weight:
 #+TITLE: Hugo with emacs org mode
-
+[[/images/post/org-mode-qt-.jpg]]
 * Why
 
 Exclusively using emacs for writing documentation. I can now write posts directly
