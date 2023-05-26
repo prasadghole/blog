@@ -26,17 +26,12 @@ git init --bare
 ## Using bare repository
 We can push existing repo to this file based repository similar to remote repository.
 
-{{<highlight C "hl_lines=1 " >}}
 git remote add origin <path of bare repo> 
 
-{{<highlight C "hl_lines=1 " >}}
 git push -u origin master
 
-{{</ highlight >}}
 We can clone this bare repository similar to our github repo
-{{<highlight C "hl_lines=1 " >}}
 git clone <path of bar repository> <clone directory>
-{{</ highlight >}}
 
 
 
