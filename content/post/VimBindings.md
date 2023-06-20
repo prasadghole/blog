@@ -8,6 +8,7 @@ description: " Various vim bindings as use in many tools "
 tags: ["vim"]
 categories: []
 author: "Prasad Ghole"
+type: "post"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
