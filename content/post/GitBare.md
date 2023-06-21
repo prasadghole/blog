@@ -2,7 +2,7 @@
 author = "Prasad Ghole"
 date = 2020-07-29
 title = "Git in a box"
-
+type = "post"
 tags = [
 "git",
 ]
@@ -19,19 +19,20 @@ git bare repository helps.
 ## Bare repository
 A bare repository is one without working copy. We can push or pull our changes to/from this repo. We
 can keep this repository portable and handy. Can be mount on shared drive and your github is done.
-{{<highlight C "hl_lines=1 " >}}
+```
 git init --bare 
+```
 
-{{</ highlight >}}
 ## Using bare repository
 We can push existing repo to this file based repository similar to remote repository.
 
+```
 git remote add origin <path of bare repo> 
-
 git push -u origin master
-
+```
 We can clone this bare repository similar to our github repo
+```
 git clone <path of bar repository> <clone directory>
-
+```
 
 

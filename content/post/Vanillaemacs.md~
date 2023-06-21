@@ -1,0 +1,109 @@
++++
+title = "Moving to Vanilla Emacs"
+date = 2023-05-26T00:00:00+05:30
+layout = ""
+linkTitle = ""
+markup = ""
+slug = ""
+type = "post"
+url = ""
+draft = true
++++
+
+## Burn the bridge. {#burn-the-bridge-dot}
+
+Instead of keeping spacemacs and classical Emacs I have decided to burn the bridge by deleting the spacemacs configuration directory. (off-course I have the backup kept somewhere safe)
+
+
+## Starting Fresh {#starting-fresh}
+
+
+### Default basic setup {#default-basic-setup}
+
+Deleting the spacemacs Emacs.d file and restarting the Emacs started the vanilla Emacs. As a noob on vanilla Emacs I will be using customization instead of solely depend on text configuration.
+
+
+### Startup configuration {#startup-configuration}
+
+{{< highlight org >}}
+(setq initial-scratch-message nil)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
+{{< /highlight >}}
+
+
+### Package managers {#package-managers}
+
+{{< highlight lisp >}}
+(require 'package)
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")
+			 ("elpa" . "https://elpa.gnu.org/packages/")))
+{{< /highlight >}}
+
+
+### Evil mode {#evil-mode}
+
+One of the important reason for spacemacs was evil mode. Hence first thing was to enable it after
+
+{{< highlight lisp >}}
+(require 'evil)
+(evil-mode 1)
+{{< /highlight >}}
+
+How can Evil complete without mapping emacs exit current operation command by Escape key.
+
+{{< highlight lisp >}}
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+{{< /highlight >}}
+
+
+### Line Numbers {#line-numbers}
+
+{{< highlight lisp >}}
+(global-display-line-numbers-mode 1)
+{{< /highlight >}}
+
+
+### Recent files (Vim Startify) {#recent-files--vim-startify}
+
+{{< highlight lisp >}}
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(setq recentf-max-saved-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+{{< /highlight >}}
+
+
+### Org Mode {#org-mode}
+
+
+#### Agenda {#agenda}
+
+Created a file in home directory and added to agenda list using "C-c ["
+
+
+### Completion {#completion}
+
+[Thanks to SystemCrafter](https://systemcrafters.net/emacs-tips/streamline-completions-with-vertico/) I am using vertico
+
+
+### Which key {#which-key}
+
+This mode give nice options of displaying options of next command.
+
+{{< highlight eli >}}
+(which-key-mode)
+{{< /highlight >}}
+
+
+### Programming Literate Programming {#programming-literate-programming}
+
+{{< highlight org >}}
+'org-babel-load-languages
+'((python . t)))
+{{< /highlight >}}
+
+(org-babel-do-load-languages
+

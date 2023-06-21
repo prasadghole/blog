@@ -48,7 +48,7 @@
 #+hugo_tags:
 #+hugo_categories:
 #+hugo_resources:
-#+hugo_type:
+#+hugo_type: post
 #+hugo_url:
 #+hugo_videos:
 #+hugo_weight:
