@@ -15,7 +15,7 @@
 #+hugo_prefer_hyphen_in_tags:
 #+hugo_allow_spaces_in_tags:
 #+hugo_auto_set_lastmod:
-#+hugo_custom_front_matter: :toc false :summary Writing hugo post in org mode
+#+hugo_custom_front_matter: 
 #+hugo_blackfriday:
 #+hugo_front_matter_key_replace:
 #+hugo_date_format: %Y-%m-%dT%T%z
@@ -48,7 +48,7 @@
 #+hugo_tags: "Hugo"
 #+hugo_categories:
 #+hugo_resources:
-#+hugo_type:
+#+hugo_type: post
 #+hugo_url:
 #+hugo_videos:
 #+hugo_weight:
@@ -68,11 +68,10 @@ in org mode.
 For my hugo even theme when I create post using new command front matter is already
 inserted. Below are customization options
 ** Hugo project path
-We need to specify hugo project path
+We need to specify hugo project path this can be relative 
 #+begin_src
-#+hugo_base_dir: /msys64/home/pghole/blog/
+#+hugo_base_dir: ../../
 #+end_src
-This is hard coded. Find way to make it based on environment Find way to make it based on environment.
 ** Front matter configuration
 #+begin_src
 #+hugo_front_matter_format: toml
