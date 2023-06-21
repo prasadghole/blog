@@ -1,0 +1,128 @@
+#+options: ':nil -:nil ^:{} num:nil toc:nil
+#+author:
+#+creator: Emacs 28.2 (Org mode 9.6.6 + ox-hugo)
+#+hugo_with_locale:
+#+hugo_front_matter_format: toml
+#+hugo_level_offset: 1
+#+hugo_preserve_filling:
+#+hugo_delete_trailing_ws:
+#+hugo_section: post
+#+hugo_bundle:
+#+hugo_base_dir: ../../
+#+hugo_goldmark:
+#+hugo_code_fence:
+#+hugo_use_code_for_kbd:
+#+hugo_prefer_hyphen_in_tags:
+#+hugo_allow_spaces_in_tags:
+#+hugo_auto_set_lastmod:
+#+hugo_custom_front_matter:
+#+hugo_blackfriday:
+#+hugo_front_matter_key_replace:
+#+hugo_date_format: %Y-%m-%dT%T%z
+#+hugo_paired_shortcodes:
+#+hugo_pandoc_citations:
+#+bibliography:
+#+html_container:
+#+html_container_class:
+#+hugo_aliases:
+#+hugo_audio:
+#+date: <2023-05-26 Fri>
+#+description:
+#+hugo_draft: true
+#+hugo_expirydate:
+#+hugo_headless:
+#+hugo_images:
+#+hugo_iscjklanguage:
+#+keywords:
+#+hugo_layout:
+#+hugo_lastmod:
+#+hugo_linktitle:
+#+hugo_locale:
+#+hugo_markup:
+#+hugo_menu:
+#+hugo_menu_override:
+#+hugo_outputs:
+#+hugo_publishdate:
+#+hugo_series:
+#+hugo_slug:
+#+hugo_tags:
+#+hugo_categories:
+#+hugo_resources:
+#+hugo_type:
+#+hugo_url:
+#+hugo_videos:
+#+hugo_weight:
+#+title: Moving to Vanilla Emacs
+
+* Burn the bridge.
+Instead of keeping spacemacs and classical Emacs I have decided to burn the bridge
+by deleting the spacemacs configuration directory. (off-course I have the backup kept
+somewhere safe)
+
+* Starting Fresh
+** Default basic setup
+Deleting the spacemacs Emacs.d file and restarting the Emacs started the vanilla
+Emacs. As a noob on vanilla Emacs I will be using customization instead of solely
+depend on text configuration. 
+** Startup configuration
+#+begin_src org
+(setq initial-scratch-message nil)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
+#+end_src
+** Package managers
+#+begin_src lisp
+(require 'package)
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+#+end_src
+
+** Evil mode
+One of the important reason for spacemacs was evil mode. Hence first thing was
+to enable it after 
+
+#+begin_src lisp
+(require 'evil)
+(evil-mode 1)
+#+end_src
+
+How can Evil complete without mapping emacs exit current operation command by
+Escape key.
+#+begin_src lisp
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+#+end_src
+** Line Numbers
+#+begin_src lisp
+(global-display-line-numbers-mode 1)
+#+end_src
+
+** Recent files (Vim Startify)
+#+begin_src  lisp
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(setq recentf-max-saved-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+#+end_src
+
+** Org Mode
+*** Agenda
+Created a file in home directory and added to agenda list using "C-c ["
+
+** Completion
+[[https://systemcrafters.net/emacs-tips/streamline-completions-with-vertico/][Thanks to SystemCrafter]] I am using vertico
+
+** Which key
+This mode give nice options of displaying options of next command.
+
+#+begin_src eli
+(which-key-mode)
+#+end_src
+
+** Programming Literate Programming
+#+begin_src org
+ 'org-babel-load-languages
+ '((python . t)))
+#+end_src
+(org-babel-do-load-languages
