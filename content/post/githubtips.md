@@ -1,13 +1,14 @@
 ---
-title: "Githubtips"
+title: "Github Tips"
 date: 2021-04-06T02:37:08+05:30
 lastmod: 2021-04-06T02:37:08+05:30
 draft: false
+type: post
 keywords: []
 description: ""
 tags: ["git"]
 categories: []
-author: ""
+author: "Prasad Ghole"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed

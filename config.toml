@@ -42,35 +42,30 @@ pygmentsStyle = "monokai"
   metaKeywords = ["blog", "gokarna", "hugo"]
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    pre = "<span data-feather='home'></span>"
-    url = "/"
-    weight = 1
 
   [[menu.main]]
     name = "Post"
     pre = "<span data-feather='book'></span>"
     url = "/post/"
-    weight = 2
+    weight = 1
 
   [[menu.main]]
     name = "Projects"
     pre = "<span data-feather='code'></span>"
     url = "/projects/"
-    weight = 3
+    weight = 2
 
   [[menu.main]]
     name = "Tags"
     pre = "<span data-feather='tag'></span>"
     url = "/tags/"
-    weight = 4
+    weight = 3
 
   [[menu.main]]
     identifier = "github"
     pre = "<span data-feather='github'></span>"
     url = "https://github.com/prasadghole"
-    weight = 5
+    weight = 4
 
   [[menu.main]]
     identifier = "LinkedIn"
