@@ -13,7 +13,7 @@ pygmentsStyle = "monokai"
 [params]
   footer = "Prasadghole.com"
   # description = "Sky above, sand below and peace within"
-  avatarURL = "/images/avatar.webp"
+  avatarURL = "/images/avatar.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
   showPostsOnHomePage = "recent"

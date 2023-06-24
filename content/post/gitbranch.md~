@@ -1,0 +1,27 @@
++++
+title = "Git branching with submodules."
+date = 2023-06-21T00:00:00+05:30
+layout = ""
+linkTitle = ""
+markup = ""
+slug = ""
+type = "post"
+url = ""
+draft = false
++++
+
+## Branching issue with git and submodule {#branching-issue-with-git-and-submodule}
+
+Having submodule many times when I create branches it is much better option if all the submodule will have same branch.
+
+To create a branch for all the submodules in a Git repository and ensure they are synced with the newly created branch, you can follow these steps:
+
+1.  Navigate to the root directory of your Git repository in your terminal.
+2.  Create a new branch using the \`git branch\` command: \`\`\`shell git branch &lt;new-branch-name&gt; \`\`\`
+3.  Switch to the newly created branch using the \`git checkout\` command: \`\`\`shell git checkout &lt;new-branch-name&gt; \`\`\`
+4.  Iterate over each submodule in the repository and create the branch within each submodule: \`\`\`shell git submodule foreach 'git checkout -b &lt;new-branch-name&gt;' \`\`\` This command iterates over each submodule using \`git submodule foreach\` and executes the \`git checkout -b\` command to create the new branch within each submodule.
+5.  Push the new branch to the remote repository: \`\`\`shell git push origin &lt;new-branch-name&gt; \`\`\` This command pushes the new branch to the remote repository, ensuring it is available for syncing with other collaborators.
+6.  Update and sync the submodules with the new branch: \`\`\`shell git submodule update --remote --recursive \`\`\` This command updates the submodules to the latest commit on the new branch and ensures they are in sync with the repository.
+
+With these steps, you can create a branch for all the submodules in your Git repository and ensure that they are synced with the newly created branch.
+

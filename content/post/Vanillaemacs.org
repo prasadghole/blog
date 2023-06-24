@@ -126,3 +126,13 @@ This mode give nice options of displaying options of next command.
  '((python . t)))
 #+end_src
 (org-babel-do-load-languages
+
+** Start with org agenda
+#+begin_src elisp
+(defun show-org-agenda ()
+  (interactive)
+  (org-agenda nil "a")
+  (delete-other-windows)
+  )
+(add-hook 'after-init-hook 'show-org-agenda)
+#+end_src

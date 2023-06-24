@@ -51,3 +51,13 @@ eval ssh-agent -s
 ssh-add ~/.ssh/xxxxxxxxx*
 
 ```
+
+# Configure beyond compare as diff tool
+``` shell
+git config --global diff.tool bc
+git config --global difftool.bc.path "C:\Program Files\Beyond Compare 4\BComp.exe"
+git config --global merge.tool bc
+git config --global mergetool.bc.path "C:\Program Files\Beyond Compare 4\BComp.exe"
+git config --global alias.mydiff "difftool --dir-diff --tool=bc --no-prompt"
+```
+[Thanks To aaronhoffman](https://gist.githubusercontent.com/aaronhoffman/60536ceb0812ce0ab0f594ae2e78f475/raw/3351b12fc0564831e17d814dac003bae80768429/git-bc.cmd)
