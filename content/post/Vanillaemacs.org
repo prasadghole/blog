@@ -122,8 +122,10 @@ This mode give nice options of displaying options of next command.
 
 ** Programming Literate Programming
 #+begin_src org
- 'org-babel-load-languages
- '((python . t)))
+   'org-babel-load-languages
+   '((python . t)
+     (plantuml . t)
+  ))
 #+end_src
 (org-babel-do-load-languages
 
