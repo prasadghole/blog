@@ -1,0 +1,117 @@
+#+options: ':nil -:nil ^:{} num:nil toc:nil
+#+author:
+#+creator: Emacs 28.2 (Org mode 9.5.5 + ox-hugo)
+#+hugo_with_locale:
+#+hugo_front_matter_format: toml
+#+hugo_level_offset: 1
+#+hugo_preserve_filling:
+#+hugo_delete_trailing_ws:
+#+hugo_section: post
+#+hugo_bundle:
+#+hugo_base_dir: ../../
+#+hugo_goldmark:
+#+hugo_code_fence:
+#+hugo_use_code_for_kbd:
+#+hugo_prefer_hyphen_in_tags:
+#+hugo_allow_spaces_in_tags:
+#+hugo_auto_set_lastmod:
+#+hugo_custom_front_matter:
+#+hugo_blackfriday:
+#+hugo_front_matter_key_replace:
+#+hugo_date_format: %Y-%m-%dT%T%z
+#+hugo_paired_shortcodes:
+#+hugo_pandoc_citations:
+#+bibliography:
+#+html_container:
+#+html_container_class:
+#+hugo_aliases:
+#+hugo_audio:
+#+date: <2023-08-19 Sat>
+#+description:
+#+hugo_draft: true
+#+hugo_expirydate:
+#+hugo_headless:
+#+hugo_images:
+#+hugo_iscjklanguage:
+#+keywords:
+#+hugo_layout:
+#+hugo_lastmod:
+#+hugo_linktitle:
+#+hugo_locale:
+#+hugo_markup:
+#+hugo_menu:
+#+hugo_menu_override:
+#+hugo_outputs:
+#+hugo_publishdate:
+#+hugo_series:
+#+hugo_slug:
+#+hugo_tags:
+#+hugo_categories:
+#+hugo_resources:
+#+hugo_type: post
+#+hugo_url:
+#+hugo_videos:
+#+hugo_weight:
+#+Title: Modus Toolbox BLE Notes
+I am trying to document steps for using Modus Toolbox to create
+central and peripheral mode.
+
+* BTSDK App Template
+This is tempalte application created from empty application it only
+start the stack and display messsage on peripheral UART port.
+
+** Connection mode
+We will add connection mode so that it can be connected to BLE central.
+
+*** Display local BLE device address
+#+begin_src c
+/* Print out the local Bluetooth Device Address. The address type  is set in the makefile (BT_DEVICE_ADDRESS) */
+wiced_bt_device_address_t bda;
+wiced_bt_dev_read_local_addr( bda );
+WICED_BT_TRACE( "Local Bluetooth Device Address: [%B]\r\n", bda );
+
+#+end_src
+
+*** Start advetising
+We should start minimal with name of peripheral device to be advertising and make sure
+proper pairing mode is enabled.
+#+begin_src c
+wiced_bt_set_pairable_mode(WICED_FALSE, WICED_FALSE);
+app_set_advertisement_data();
+#+end_src
+
+*** Advertising Data
+This is set by below function.
+Once struct of ~wiced_bt_ble_advert_elem_t~ is filled set use
+~wiced_bt_ble_set_raw_advertisement_data~ function to create TLB (Type Length Bytes)
+arrary is created.
+
+#+begin_src c
+wiced_result_t app_set_advertisement_data(void)
+{
+#if BTSTACK_VER >= 0x03000001
+    return wiced_bt_ble_set_raw_advertisement_data(CY_BT_ADV_PACKET_DATA_SIZE, cy_bt_adv_packet_data);
+#else
+    wiced_bt_ble_advert_elem_t  adv_elem[3];
+    wiced_result_t              result;
+    uint8_t         num_elem                = 0;
+    uint8_t         flag                    = BTM_BLE_GENERAL_DISCOVERABLE_FLAG | BTM_BLE_BREDR_NOT_SUPPORTED;
+
+
+    adv_elem[num_elem].advert_type          = BTM_BLE_ADVERT_TYPE_FLAG;
+    adv_elem[num_elem].len                  = sizeof(uint8_t);
+    adv_elem[num_elem].p_data               = &flag;
+    num_elem++;
+
+    adv_elem[num_elem].advert_type          = BTM_BLE_ADVERT_TYPE_NAME_COMPLETE;
+    adv_elem[num_elem].len                  = strlen((const char *) wiced_bt_cfg_settings.device_name);
+    adv_elem[num_elem].p_data               = (uint8_t *) wiced_bt_cfg_settings.device_name;
+    num_elem++;
+
+    result = wiced_bt_ble_set_raw_advertisement_data(num_elem, adv_elem);
+
+    return result;
+#endif
+}
+
+#+end_src
