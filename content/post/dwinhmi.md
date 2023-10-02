@@ -2,7 +2,7 @@
 title: "Dwinhmi"
 date: 2022-07-03T14:06:55+05:30
 lastmod: 2022-07-03T14:06:55+05:30
-draft: false
+draft: true
 type: post
 keywords: []
 description: "Using DWIN HMI Software"

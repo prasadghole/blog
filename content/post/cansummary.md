@@ -2,7 +2,7 @@
 title: "CAN Summary"
 date: 2021-02-03T11:34:54+05:30
 lastmod: 2021-02-03T11:34:54+05:30
-draft: false
+draft: true
 type: post
 keywords: []
 description: "CAN protocol summary"
